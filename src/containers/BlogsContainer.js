@@ -11,9 +11,7 @@ class BlogsContainer extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
-            
             <div>
                 <BlogList blogs={this.props.blogs}/>
                 <BlogForm />
