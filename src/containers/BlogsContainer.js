@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BlogForm from '../components/blogs/BlogForm';
 import BlogList from '../components/blogs/BlogList';
-import { fetchBlogs } from '../actions/blogActions'
+import { fetchBlogs, addPost } from '../actions/blogActions'
 
 class BlogsContainer extends Component {
 
@@ -25,7 +25,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchBlogs: () => dispatch(fetchBlogs())
+    fetchBlogs: () => dispatch(fetchBlogs()),
+    addPost: (post) => dispatch(addPost(post))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(BlogsContainer);
