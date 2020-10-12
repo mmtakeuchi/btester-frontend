@@ -6,6 +6,11 @@ const blogsReducer = (state = {blogs:[]}, action) => {
                 blogs: action.blogs,
             }
 
+        case 'GET_POST':
+            console.log(action.blogId)
+            const post = state.blogs.find(blog => blog.id === action.blogId)
+            return {...state, post}
+
         case 'ADD_POST':
             console.log(action.blog)
             const newPost = {title: action.title, content: action.content}
