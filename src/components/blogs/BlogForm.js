@@ -17,11 +17,13 @@ class BlogForm extends Component {
         event.preventDefault();
 
         this.props.addPost({...this.state})
-        
+
         this.setState({
             title: "",
             content: ""
         })
+        
+        this.props.history.push('/blogs')
     }
 
     render() {
