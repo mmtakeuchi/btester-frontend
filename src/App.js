@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Blogs from './containers/Blogs.js'
+import Blogs from './containers/BlogsContainer.js'
 
 function App() {
   return (
