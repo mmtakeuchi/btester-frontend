@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BlogForm from '../components/blogs/BlogForm';
-import Blogs from '../components/blogs/Blogs';
+import BlogList from '../components/blogs/BlogList';
 import { fetchBlogs } from '../actions/blogActions'
 
 class BlogsContainer extends Component {
@@ -15,7 +15,7 @@ class BlogsContainer extends Component {
         return (
             <div>
                 <BlogForm />
-                <Blogs blogs={this.props.state}/>
+                <BlogList blogs={this.props.blogs}/>
             </div>
         )
     }
