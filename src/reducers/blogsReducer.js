@@ -1,7 +1,11 @@
-const blogsReducer = (state = [], action) => {
+const blogsReducer = (state = {blogs:[]}, action) => {
     switch(action.type) {
-        case 'ADD_BLOG':
-            return [...state, action.blog]
+        case 'FETCH_BLOGS':
+            console.log('these are the blogs:', action.blogs)
+            return {
+                ...state,
+                blogs: action.blogs,
+            }
         
         default:
             return state
