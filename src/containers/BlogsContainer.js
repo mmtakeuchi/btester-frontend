@@ -14,8 +14,8 @@ class BlogsContainer extends Component {
         
         return (
             <div>
-                <BlogForm />
                 <BlogList blogs={this.props.blogs}/>
+                <BlogForm />
             </div>
         )
     }

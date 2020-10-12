@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Blog = (prop) => {
-    console.log(prop)
 
     return(
         <div id={prop.id}>
