@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Blogs from './containers/BlogsContainer.js'
+import BlogsContainer from './containers/BlogsContainer.js'
 
 function App() {
   return (
     <div className="App">
-      <Blogs />
+      <BlogsContainer />
     </div>
   );
 }

@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import BlogForm from '../components/blogs/BlogForm'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import BlogForm from '../components/blogs/BlogForm';
+import Blogs from '../components/blogs/Blogs';
 
-class Blogs extends Component {
+class BlogsContainer extends Component {
     render() {
         return (
             <div>
                 <BlogForm />
+                <Blogs />
             </div>
         )
     }
 }
 
-export default Blogs
+export default BlogsContainer
