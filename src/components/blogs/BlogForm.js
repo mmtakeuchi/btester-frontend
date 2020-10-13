@@ -23,7 +23,7 @@ class BlogForm extends Component {
             content: ""
         })
         
-        // this.props.history.push('/blogs')
+        this.props.history.push('/blogs')
     }
 
     render() {
@@ -31,8 +31,12 @@ class BlogForm extends Component {
             <div>
                 <h3>Create Blog</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
-                    <textarea type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
+                    <label htmlFor="title">Title:   </label>
+                    <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/><br/>
+
+                    <label htmlFor="content">Content:   </label>
+                    <textarea type="text" name="content" value={this.state.content} onChange={this.handleChange}/><br/>
+
                     <input type="submit" value="Create Blog" />
                 </form>
             </div>

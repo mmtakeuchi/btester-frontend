@@ -1,18 +1,26 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Blog = (props) => {
     // console.log(props)
-    console.log(props.blog.id)
+    console.log(props)
+    debugger;
     
+    // handleDelete = (event) => {
+    //     this.props.deletePost(this.props.blog.id);
+    //     this.props.history.push("/blogs")
+    // }
+
     return (
-        <div id={props.blog.id}>
-            <li>
-            {/* <h3><Link to={'/blogs/' + props.id}>{props.title}</Link></h3> */}
-                <h3>{props.blog.title}</h3>
-                <div>{props.blog.content}</div>
-                <button onClick={() => props.deletePost(props.blog.id)}>Delete Post</button>
-            </li>
+        <div>
+            one Post
+            {/* <h3>{props.blog.title}</h3> */}
+            {/* <li>
+                <h3><Link to={'/blogs/' + props.blog.id}>{props.blog.title}</Link></h3>
+                {/* <h3>{props.blog.title}</h3> */}
+                {/* <div>{props.blog.content}</div> */}
+                {/* <button onClick={() => props.deletePost(this.props.blog.id)}>Delete Post</button> */}
+            {/* </li> */} 
         </div>
     )
 }

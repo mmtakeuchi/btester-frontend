@@ -1,15 +1,18 @@
 import React from 'react'
 import Blog from './Blog'
+import { Link } from 'react-router-dom'
 
 const BlogList = (props) => {
-    const blog = props.blogs.map((blog, i) => <Blog key={i} blog={blog} deletePost={props.deletePost}/>)
     
     return (
         <div>
             <h2>Blogs</h2>
-                <ul>
-                    {blog}
-                </ul>
+            <ul>
+                {props.blogs.map(blog => 
+                    <li key={blog.id}>
+                        <h3><Link to={'/blogs/' + blog.id}>{blog.title}</Link></h3>
+                    </li>)}
+            </ul>
         </div>
     )
 }
