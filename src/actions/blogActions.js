@@ -32,19 +32,7 @@ export const addPost = (post) => {
     }
 }
 
-export const getPost = (blogId) => {
-    console.log(blogId)
-    return (dispatch) => {
-        fetch(baseURL + "blogs/" + blogId)
-        .then(resp => resp.json())
-        .then(data => dispatch({type: 'GET_POST', blogId}))
-        .catch(errors => console.log(errors))
-    }
-}
-
-export const deletePost = (blogId) => {
-    console.log(blogId)
-    
+export const deletePost = (blogId) => { 
     return (dispatch) => {
         fetch(baseURL + "blogs/" + blogId, {
             method: 'DELETE'

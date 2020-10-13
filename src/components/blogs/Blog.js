@@ -5,22 +5,23 @@ const Blog = (props) => {
     // console.log(props.match)
     
     const blog = (props.blogs && props.blogs.find(post => parseInt(props.match.params.id, 10) === post.id))
+    console.log(blog)
     const iBlog = () => {
-        console.log(blog)
         if (blog) {
             return (
                 <div>
-                    <div>{blog.title}</div>
+                    <h3>{blog.title}</h3>
                     <div>{blog.content}</div>
-                    <button onClick={() => props.deletePost(blog.id)}>Deleete Post</button>
+                    <button onClick={() => handleDelete()}>Deleete Post</button>
                 </div>
             )
         }
     }
-    // handleDelete = (event) => {
-    //     this.props.deletePost(this.props.blog.id);
-    //     this.props.history.push("/blogs")
-    // }
+    const handleDelete = () => {
+        props.deletePost(parseInt(props.match.params.id, 10));
+        console.log(props)
+        props.history.push("/blogs")
+    }
 
     return (
         <div>

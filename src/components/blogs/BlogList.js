@@ -1,9 +1,9 @@
 import React from 'react'
 import Blog from './Blog'
-import { Link, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const BlogList = (props) => {
-    
+    console.log(props)
     return (
         <div>
             <h2>Blogs</h2>
