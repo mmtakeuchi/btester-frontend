@@ -18,7 +18,7 @@ class BlogsContainer extends Component {
                 <Switch>
                     <Route exact path="/blogs" render={(props) => <BlogList {...props} blogs={this.props.blogs} deletePost={this.props.deletePost}/>} />
                     <Route exact path="/blogs/new" render={(props) => <BlogForm {...props} addPost={this.props.addPost}/>}/>
-                    <Route exact path="/blogs/:id" render={(props) => <Blog {...props} blogs={this.props.blogs} />} />
+                    <Route path="/blogs/:id" render={(props) => <Blog {...props} blogs={this.props.blogs} />} />
                 </Switch>
                 {/* <BlogList blogs={this.props.blogs} deletePost={this.props.deletePost}/> */}
                 {/* <BlogForm addPost={this.props.addPost}/> */}

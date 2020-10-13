@@ -1,6 +1,6 @@
 import React from 'react'
 import Blog from './Blog'
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 
 const BlogList = (props) => {
     
