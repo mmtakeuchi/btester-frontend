@@ -4,7 +4,7 @@ export const fetchBlogs = () => {
     return (dispatch) => {
         fetch(baseURL + "blogs")
         .then(resp => resp.json())
-        .then(blogs => dispatch({type: 'FETCH_BLOGS', blogs}))
+        .then(blogs => dispatch({type: 'FETCH_BLOG', blogs}))
         .catch(errors => console.log(errors))
     }
 }
@@ -17,7 +17,7 @@ export const addPost = (post) => {
                 content: post.content
             }
         }
-
+        
         fetch(baseURL + "blogs", {
             method: 'POST',
             headers: {
@@ -27,7 +27,7 @@ export const addPost = (post) => {
             body: JSON.stringify(strongParams)
         })
         .then(resp => resp.json())
-        .then(data => dispatch({type: 'ADD_POST', data}))
+        .then(post => dispatch({type: 'ADD_POST', post}))
         .catch(errors => console.log(errors))
     }
 }

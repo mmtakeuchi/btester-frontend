@@ -14,16 +14,17 @@ class BlogForm extends Component {
     }
 
     handleSubmit = (event) => {
+        console.log(this.state)
         event.preventDefault();
 
-        this.props.addPost({...this.state})
+        this.props.addPost(this.state)
 
         this.setState({
             title: "",
             content: ""
         })
         
-        this.props.history.push('/blogs')
+        // this.props.history.push('/blogs')
     }
 
     render() {

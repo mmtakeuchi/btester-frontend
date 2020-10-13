@@ -1,26 +1,24 @@
 const blogsReducer = (state = {blogs:[]}, action) => {
     switch(action.type) {
-        case 'FETCH_BLOGS':
+        case 'FETCH_BLOG':
             return {
                 ...state,
                 blogs: action.blogs,
             }
 
         case 'GET_POST':
-            console.log(action.blogId)
             const post = state.blogs.find(blog => blog.id === action.blogId)
             return {...state, post}
 
         case 'ADD_POST':
-            console.log(action.blog)
-            const newPost = {title: action.title, content: action.content}
+            debugger;
+            const newPost = {title: action.post.title, content: action.post.content}
             return {
                 ...state,
                 blogs: [...state.blogs, newPost]
             }
             
         case 'DELETE_POST':
-            console.log(action.blogId)
             const filteredBlogs = state.blogs.filter(blog => blog.id !== action.blogId)
             return {...state, filteredBlogs}
 
