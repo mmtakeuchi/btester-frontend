@@ -2,8 +2,9 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 
 const Blog = (props) => {
+    // console.log(props)
     console.log(props.blog.id)
-
+    
     return (
         <div id={props.blog.id}>
             <li>

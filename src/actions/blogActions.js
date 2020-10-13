@@ -44,12 +44,12 @@ export const getPost = (blogId) => {
 
 export const deletePost = (blogId) => {
     console.log(blogId)
-    debugger;
+    
     return (dispatch) => {
         fetch(baseURL + "blogs/" + blogId, {
             method: 'DELETE'
         })
-        .then(resp => resp.json())
+        .then(resp => console.log(resp))
         .then(data => dispatch({type: 'DELETE_POST', blogId}))
         .catch(errors => console.log(errors))
     }

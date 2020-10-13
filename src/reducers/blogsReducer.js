@@ -18,6 +18,7 @@ const blogsReducer = (state = {blogs:[]}, action) => {
             }
             
         case 'DELETE_POST':
+            console.log(action.blogId)
             const filteredBlogs = state.blogs.filter(blog => blog.id !== action.blogId)
             return {...state, filteredBlogs}
 
