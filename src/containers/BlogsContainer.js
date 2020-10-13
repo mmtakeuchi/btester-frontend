@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Switch, Route} from 'react-router-dom'
 import BlogForm from '../components/blogs/BlogForm';
 import BlogList from '../components/blogs/BlogList';
 import { fetchBlogs, addPost, deletePost } from '../actions/blogActions'
@@ -13,8 +14,12 @@ class BlogsContainer extends Component {
     render() {
         return (
             <div>
-                <BlogList blogs={this.props.blogs} deletePost={this.props.deletePost}/>
-                <BlogForm addPost={this.props.addPost}/>
+                <Switch>
+                    <Route exact path="/blogs" render={(props) => <BlogList {...props} blogs={this.props.blogs} deletePost={this.props.deletePost}/>} />
+                    <Route exact path="/blogs/new" render={(props) => <BlogForm {...props} addPost={this.props.addPost}/>}/>
+                </Switch>
+                {/* <BlogList blogs={this.props.blogs} deletePost={this.props.deletePost}/> */}
+                {/* <BlogForm addPost={this.props.addPost}/> */}
             </div>
         )
     }

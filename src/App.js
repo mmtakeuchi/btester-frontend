@@ -9,12 +9,13 @@ class App extends Component {
     
     return (
         <div className="App">
-          {/* <Navbar /> */}
+          <Navbar />
+          <Home/>
+          <BlogsContainer />
           {/* <Switch> */}
             {/* <Route exact path="/" component={ Home } /> */}
             {/* <Route exact path="/blogs" component={BlogsContainer} /> */}
           {/* </Switch> */}
-          <BlogsContainer />
         </div>
     )
   }
