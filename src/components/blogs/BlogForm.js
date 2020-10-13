@@ -14,7 +14,6 @@ class BlogForm extends Component {
     }
 
     handleSubmit = (event) => {
-        console.log(this.state)
         event.preventDefault();
 
         this.props.addPost(this.state)

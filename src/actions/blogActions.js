@@ -44,6 +44,7 @@ export const getPost = (blogId) => {
 
 export const deletePost = (blogId) => {
     console.log(blogId)
+    debugger;
     return (dispatch) => {
         fetch(baseURL + "blogs/" + blogId, {
             method: 'DELETE'
