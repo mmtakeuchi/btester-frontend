@@ -2,14 +2,16 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 
 const Blog = (props) => {
-    // console.log(props)
+    console.log(props.blog.id)
 
-    return(
+    return (
         <div id={props.blog.id}>
+            <li>
             {/* <h3><Link to={'/blogs/' + props.id}>{props.title}</Link></h3> */}
-            <h3>{props.blog.title}</h3>
-            <div>{props.blog.content}</div>
-            <button onClick={() => props.deletePost(props.blog.id)}>Delete Post</button>
+                <h3>{props.blog.title}</h3>
+                <div>{props.blog.content}</div>
+                <button onClick={() => props.deletePost(props.blog.id)}>Delete Post</button>
+            </li>
         </div>
     )
 }

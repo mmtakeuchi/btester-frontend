@@ -11,7 +11,6 @@ const blogsReducer = (state = {blogs:[]}, action) => {
             return {...state, post}
 
         case 'ADD_POST':
-            
             const newPost = {title: action.post.title, content: action.post.content}
             return {
                 ...state,
