@@ -29,6 +29,7 @@ class BlogForm extends Component {
     render() {
         return (
             <div>
+                <h3>Create Blog</h3>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/>
                     <textarea type="text" name="content" value={this.state.content} onChange={this.handleChange}/>
